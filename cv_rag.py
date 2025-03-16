@@ -43,5 +43,5 @@ else:
 # Opret query engine
 query_engine = index.as_query_engine(llm=llm)
 # Hent svar fra LLM
-response = query_engine.query("Skriv en ansøgning ud jobopslaget, med udgangspunkt i mit CV. Skriv i samme tone, præsenter der som Gemma2 der skriver ansøgningen på mine vegne.")
+response = query_engine.query("Skriv en ansøgning ud jobopslaget, med udgangspunkt i mit CV. Skriv i samme tone. Præsenter dig som Gemma2 der skriver ansøgningen på mine vegne, forklar du er implementeret i Python og koden kan findes på følgende github link: https://github.com/kimhaagenmathiesen/cv_rag/blob/main/data/cv.pdf.")
 print(response)
