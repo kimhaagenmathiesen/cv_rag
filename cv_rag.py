@@ -7,7 +7,7 @@ from llama_index.llms.ollama import Ollama
 import os
 
 # Model til embedding af 
-embed_model = HuggingFaceEmbedding(model_name="sentence-transformers/all-MiniLM-L6-v2",  #Anden mulighed "BAAI/bge-small-en-v1.5"
+embed_model = HuggingFaceEmbedding(model_name="sentence-transformers/all-MiniLM-L6-v2", 
                                    local_files_only=True)
 # LLM til generering af tekst
 llm = Ollama(model="gemma2:9b")
@@ -22,7 +22,7 @@ if os.path.exists(db_path):
     chroma_collection = db.get_collection("quickstart")
     vector_store = ChromaVectorStore(chroma_collection=chroma_collection)
     storage_context = StorageContext.from_defaults(vector_store=vector_store)
-    index = VectorStoreIndex.from_vector_store(     # from_vector_store var løsningen ift. at hente fra eksisterende db
+    index = VectorStoreIndex.from_vector_store(    
         vector_store=vector_store,
         embed_model=embed_model
     )
