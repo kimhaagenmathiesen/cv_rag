@@ -2,9 +2,8 @@ llama-index-core
 llama-index-llms-ollama
 llama-index-embeddings-huggingface
 llama-index-vector-stores-chroma
-huggingface-hub
-PyMuPDF
+llama-index-readers-file
 chromadb
 ollama
 sentence-transformers
-llama-index-readers-file
+PyMuPDF
